@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:fitsSystemWindows="true">
+
+    <com.selvasai.selvyimageprocessing.camera.ui.CameraView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:keepScreenOn="true"></com.selvasai.selvyimageprocessing.camera.ui.CameraView>
+
+    <com.selvasai.selvyimageprocessing.imagecrop.ui.ImageCropView
+        android:id="@+id/image_crop_view_crop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!--상하좌우 투명프레임-->
+    <ImageView
+        android:id="@+id/bgLprFrame_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_bg_lpr"
+        android:scaleType="fitXY" />
+    <ImageView
+        android:id="@+id/bgLprFrame_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_bg_lpr"
+        android:scaleType="fitXY" />
+    <ImageView
+        android:id="@+id/bgLprFrame_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_bg_lpr"
+        android:scaleType="fitXY" />
+    <ImageView
+        android:id="@+id/bgLprFrame_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_bg_lpr"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/bgFrame_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_bg"
+        android:scaleType="fitXY" />
+    <ImageView
+        android:id="@+id/bgFrame_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/camera_bg"
+        android:scaleType="fitXY" />
+
+    <!--Camera Frame-->
+    <ImageView
+        android:id="@+id/Frame_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/photo_frame_topleft"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/Frame_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/photo_frame_topright"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/Frame_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/photo_frame_bottomleft"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/Frame_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/photo_frame_bottomright"
+        android:scaleType="fitXY"/>
+
+    <!--카메라상단 레이블 : 촬영 화면-->
+    <TextView
+        android:id="@+id/cameraToptxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="#FFFFFF"
+        android:lineSpacingExtra ="5dp" />
+
+    <!--카메라중단 레이블-->
+    <TextView
+        android:id="@+id/cameraMiddletxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:textColor="#FFFFFF"
+        android:background="#33acff"
+        android:lineSpacingExtra ="5dp"
+        android:visibility="gone" />
+
+    <!--Capture Button-->
+    <ImageView
+        android:id="@+id/btn_crop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:onClick="onCaptureBtnClick"
+        android:src="@drawable/btn_shoot_ok"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        android:contentDescription="영역설정 확인"/>
+
+    <!--TakePicture Button-->
+    <ImageView
+        android:id="@+id/btn_takepicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="#00FFFFFF"
+        android:onClick="onCaptureBtnClick"
+        android:src="@drawable/btn_shoot"
+        android:visibility="gone"
+        android:scaleType="fitXY"
+        android:contentDescription="사진 촬영"/>
+
+    <!--SwitchButton-->
+    <ImageView
+        android:id="@+id/btn_Switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSwitchBtnClick"
+        android:src="@drawable/btn_single_auto"
+        android:scaleType="fitXY"
+        android:contentDescription="자동 수동 촬영 전환"/>
+
+    <!--CloseButton-->
+    <ImageView
+        android:id="@+id/btn_Close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCloseBtnClick"
+        android:src="@drawable/btn_close_white"
+        android:scaleType="fitXY"
+        android:contentDescription="카메라 화면 닫기"/>
+
+</RelativeLayout>

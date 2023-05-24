@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.rosisit.idcardcapture.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+        <include layout="@layout/content_main" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnID"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="신분증"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="bottom|left" />
+
+    <Button
+        android:id="@+id/btnDOC"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="문서촬영"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="bottom"
+        android:layout_marginLeft="90dp"/>
+
+    <Button
+        android:id="@+id/btnPIC_port"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="일반촬영"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_marginRight="90dp"/>
+
+    <Button
+        android:id="@+id/btnPIC_land"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="일반촬영"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="bottom|right"
+        android:layout_marginRight="90dp"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:id="@+id/btnLPR"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="번호판"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="bottom|right" />
+
+
+</android.support.design.widget.CoordinatorLayout>

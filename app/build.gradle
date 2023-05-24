@@ -1,0 +1,51 @@
+//[lib] apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+android {
+//    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 31
+    defaultConfig {
+        //[lib] applicationId "com.rosisit.idcardcapture"
+        minSdkVersion 16
+        targetSdkVersion 31
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config
+        }
+    }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            if (outputFile != null && outputFileName.endsWith('.aar')) {
+                outputFileName = "imagerecog.aar"
+            }
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    api 'com.android.support:appcompat-v7:26.+'
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    //noinspection GradleCompatible
+    api 'com.android.support:design:26.+'
+    testImplementation 'junit:junit:4.12'
+
+    api files('libs/libSelvyImageProcessing.jar')
+    api files('libs/libSelvyImageController.jar')
+
+}

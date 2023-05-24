@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff000000"
+    tools:context="com.rosisit.idcardcapture.CameraActivity"
+     >
+
+    <!-- nib 02/24/2019 SurfaceView 를 여기에 두면 화면 전체를 preview 로 잡는다... -->
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000" />
+
+    <FrameLayout
+        android:id="@+id/ondraw_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000" />
+
+
+    <!-- preview window -->
+    <View
+        android:id="@+id/camera_window"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerVertical="true" />
+
+    <!-- screening the bottom of preview -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/camera_window"
+        android:background="#00000000"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_autodetect_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/chk_select_autodetect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-20dp"
+            android:layout_marginTop="7dp"
+            android:button="@drawable/auto_check"
+            android:contentDescription="@string/toggle_auto_check"
+            android:scaleX="0.60"
+            android:scaleY="0.60" />
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="-10dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/btn_close"
+            android:scaleType="fitXY"
+            android:scaleX="0.45"
+            android:scaleY="0.45"
+            android:src="@drawable/btn_close_white"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+
+
+        <!-- 사진 찍기 버튼 -->
+        <ImageButton
+            android:id="@+id/shutter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/camera_window"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/btn_shutter"
+            android:scaleType="fitXY"
+            android:src="@drawable/btn_shoot"
+            android:scaleX="0.70"
+            android:scaleY="0.70"
+            android:visibility="visible" />
+
+
+
+
+
+    <!-- 엔진 버전 표시 -->
+    <TextView
+        android:id="@+id/engine_version_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:paddingBottom="10dp"
+        android:ellipsize="none"
+        android:text="engine version"
+        android:textColor="#ff1e80e1"
+        android:textSize="10sp" />
+
+
+
+</RelativeLayout>

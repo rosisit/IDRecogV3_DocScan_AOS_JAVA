@@ -1,0 +1,8 @@
+ROSISIT.jks
+
+26686530
+rosis
+
+26686530
+
+master : 26686530

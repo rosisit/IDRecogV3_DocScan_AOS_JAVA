@@ -1,0 +1,105 @@
+<resources tools:ignore="ExtraTranslation" xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name2">Rosis Demo</string>
+
+    <string name="camera_error">사용하시는 기기는 카메라를 지원하지 않습니다</string>
+
+    <string name="image_processing">이미지 보정 중..</string>
+    <string name="save_processing">파일로 저장중...</string>
+    <string name="upload_processing">이미지 업로드 진행중...</string>
+    <string name="crypt_processing">암호화 진행중..</string>
+
+    <string name="noti_focus_idcard">신분증을 아래 영역에 맞추어 주세요 (신분증 앞면)</string>
+    <string name="noti_focus_document">대출문서 전체를 촬영하여 주세요</string>
+    <string name="noti_crop_01">신분증에 맞게 영역을 설정후 하단 버튼을 누르세요</string>
+    <string name="noti_crop_02">대출문서에 맞게 영역을 설정후 하단 버튼을 누르세요</string>
+
+    <string name="error_retry">정확한 정보 파악을 위해 다시 촬영합니다.\n\n\n촬영이 끝날 때까지 카메라를 신분증에 맞춰 주세요.</string>
+    <string name="error_focus">초점이 맞지 않았습니다\n잠시만 기다려주세요.</string>
+    <string name="error_identy">결과 이미지 보정 실패</string>
+
+    <string name="popup_networkerror">네트워크(Wifi/3G/LTE) 상태를 확인 후\n 다시 진행해 주세요</string>
+    <string name="popup_servererror">서버가 응답하지 않아요\n 잠시후 다시 시도해 주세요.</string>
+    <string name="popup_checkimage">전송할 이미지를 체크하여 주세요</string>
+    <string name="popup_networkretry">네트워크가 연결되었습니다\n 재촬영 후 진행해 주세요</string>
+
+    <string name="type">종류</string>
+    <string name="license_number">운전면허번호</string>
+    <string name="name">이름</string>
+    <string name="rrn">주민등록번호</string>
+    <string name="arn">외국인 등록번호</string>
+    <string name="issue_date">발급일자</string>
+    <string name="organization">발급처</string>
+    <string name="nation">국가 지역</string>
+    <string name="resident_status">체류자격</string>
+    <string name="acfn">ACFN</string>
+    <string name="license_aptitude_date">만료일자</string>
+    <string name="license_type">종별구분</string>
+
+    <string name="error_text">정확한 정보 파악을 위해 다시 촬영합니다.\n촬영이 끝날 때까지 카메라를 신분증에 맞춰 주세요.</string>
+    <string name="error_not_focus">초점이 맞지 않았습니다. 잠시만 기다려주세요.</string>
+    <string name="error_not_focus2">초점이 맞지 않습니다.\n촬영이 끝날 때까지 카메라를 신분증에 맞춰 주세요.</string>
+    <string name="error_small_area">신분증이 너무 작습니다.\n가이드 라인에 맞게 신분증을 맞춰 주세요.</string>
+    <string name="error_capture_fail">촬영을 실패했습니다.\n다시 시도해 주세요.</string>
+
+    <string name="error_recog_fail">신분증 인식이 실패하였습니다.\n신분증에 반사광이 없도록 하여 재촬영해 주세요</string>
+    <string name="error_recog_fail_doc">문서영역 인식이 실패하였습니다.\n문서 영역을 재촬영해 주세요</string>
+    <string name="error_recog_name">[성명] 인식이 실패하였습니다.\n신분증에 반사광이 없도록 하여 재촬영해 주세요</string>
+    <string name="error_recog_rnn">[주민번호] 인식이 실패하였습니다.\n신분증에 반사광이 없도록 하여 재촬영해 주세요</string>
+    <string name="error_recog_date">[발급일자] 인식이 실패하였습니다.\n신분증에 반사광이 없도록 하여 재촬영해 주세요</string>
+    <string name="error_recog_licensenum">[면허번호] 인식이 실패하였습니다.\n신분증에 반사광이 없도록 하여 재촬영해 주세요</string>
+    <string name="error_recog_monochrome">촬영된 신분증이 복사본(흑백)입니다.\n 신분증을 확인하시고 재촬영해 주세요</string>
+    <string name="error_recog_3time">촬영 재시도 횟수가 3회를 초과하였습니다.\n신분증을 확인하시고 재촬영해 주세요</string>
+    <string name="error_recog_5time">촬영 재시도 횟수가 5회를 초과하였습니다.\n신분증을 확인하시고 재촬영해 주세요</string>
+
+    <string name="recognize">이미지 인식 정보 파악 중..</string>
+
+    <string-array name="spinnerArray">
+        <item>Saida</item>
+        <item>Babilloan.com</item>
+        <item>Babilloan.net  </item>
+        <item>Smart Banking</item>
+    </string-array>
+
+    <string name="error_license">신분증 인식이 허용되지 않은 패키지입니다. </string>
+    <string name="error_unknown">알 수 없는 오류가 발생했습니다. </string>
+    <string name="error_finally_not_recog">따라서 본 앱은 신분증 인식을 할 수 없습니다. </string>
+
+    <string name="btn_shutter">카메라 촬영</string>
+    <string name="toggle_auto_check">자동 수동 촬영 전환</string>
+    <string name="toggle_set_auto">자동 촬영 선택</string>
+    <string name="toggle_set_manual">수동 촬영 선택</string>
+    <string name="btn_close">촬영 취소</string>
+
+
+    <!-- Modal -->
+    <!-- Title -->
+    <string name="error_title">에러</string>
+    <!-- Success -->
+    <!-- Wait -->
+    <string name="wait_ocr">잠시만 기다려 주세요....</string>
+    <!-- Guide -->
+    <string name="guide_permission_granted">앱 실행을 위해 권한 허용이 필요합니다. </string>
+    <string name="guide_fit_idcard">신분증을 가이드 라인에 맞춰주세요. </string>
+    <string name="guide_fit_idcard_add_increase_recognize">배경이 어두우면 정확도가 높아집니다. </string>
+    <string name="guide_focus_on_screen_center">(초점이 맞지 않으면 화면 중앙을 터치해 주세요.) </string>
+
+
+    <string name="error_inner_function">촬영중 에러가 발생하였습니다. 다시 실행해 주세요. </string>
+    <string name="error_ocr_fail">신분증 인식에 실패하였습니다. </string>
+    <string name="error_ocr_fail_cuz_light">신분증 인식에 실패하였습니다. 빛 반사에 주의하여 다시 촬영해 주세요.</string>
+    <string name="error_ocr_fail_question_manager">관리자에게 문의하세요. </string>
+    <string name="error_ocr_fail_error_code">에러 코드: </string>
+
+    <string name="error_overtime_header">촬영횟수가 </string>
+    <string name="error_overtime_footer">번을 초과하였습니다.이전 화면으로 되돌아갑니다. </string>
+
+
+
+    <string name="error_ocr_fail_items_header">등의 </string>
+    <string name="error_ocr_fail_items_footer">항목이 오인식 되었습니다. 재촬영해주세요. </string>
+    <string name="error_ocr_fail_add_retry">신분증을 제대로 인식하지 못하였습니다. 재촬영해주세요. </string>
+    <string name="regex_number_korean">[^\\dㄱ-힣]</string>
+    <string name="regex_number">[^\\d]</string>
+
+</resources>

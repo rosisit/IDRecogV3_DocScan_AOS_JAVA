@@ -175,6 +175,8 @@ public class OCRCameraActivity extends Activity {
 
     public static final String DATA_ALERT_MESSAGE = "alertmessage";
 
+    public static final String DATA_MONOCHECK = "datamonocheck";
+
 
     /***
      * preview area
@@ -277,6 +279,8 @@ public class OCRCameraActivity extends Activity {
     //수치화된 프리뷰 포커스
     private int focusValue;
 
+    private boolean monochromeCheck;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -303,6 +307,9 @@ public class OCRCameraActivity extends Activity {
 
         //영역 인식 소리 재생 여부
         isDetectSound = getIntent().getBooleanExtra(DOCUMENT_DETECTION_SOUND, false);
+
+        monochromeCheck = getIntent().getBooleanExtra(DATA_MONOCHECK, true);
+
 
         //재촬영 횟수
         defineShutterCnt = getIntent().getIntExtra(SHUTTER_COUNT, 3);
@@ -362,6 +369,8 @@ public class OCRCameraActivity extends Activity {
         //확인 필요 -> 이미지는 메모리에만 적재하기 때문에 왜 임시 경로가 필요한지 확인 필요
         String rawDataPath = storage.createWorkDir("IDRcgn");
         IDCardRcgn.SetExternalStorage(rawDataPath);
+
+
 
         //마스킹 옵션
         mMaskOption = getIntent().getIntExtra(DATA_MASKING_PROCEED, 1);
@@ -561,6 +570,9 @@ public class OCRCameraActivity extends Activity {
         //OCR을 하지 않을땐 Empty로 return
         if(isNotOcr)
             return "";
+
+        if(monochromeCheck && idRcgnResult.isColor == 0)
+            return "촬영된 신분증이 복사본(흑백)입니다. 신분증을 확인하시고 재촬영해 주십시오.";
 
         //OCR로 파악된 신분증 종류
         int idType = idRcgnResult.IDtype;
@@ -1025,15 +1037,15 @@ public class OCRCameraActivity extends Activity {
 
             //OCR 결과, 원시 데이터 또한 삽입
             intent.putExtra(DATA_RESULT_STRUCT, idRcgnResult);
-
-
         } catch (Exception ex) {
             ex.printStackTrace();
             intent.putExtra(DATA_ALERT_MESSAGE, getString(R.string.error_ocr_fail));
             intent.putExtra("MSG_RESULT_FAIL", 10006);
+            idRcgnResult = null;
             setResult(RETURN_OCR_FAIL, intent);
             finish();
         }
+        idRcgnResult = null;
         setResult(RETURN_OK, intent);
         finish();
     }
@@ -1298,6 +1310,7 @@ public class OCRCameraActivity extends Activity {
         if (waitingDialog == null) {
             waitingDialog = new ProgressDialog(this);
             waitingDialog.setMessage(msg);
+
             waitingDialog.setIndeterminate(true);
             waitingDialog.setCancelable(false);
         } else if (waitingDialog.isShowing()) {

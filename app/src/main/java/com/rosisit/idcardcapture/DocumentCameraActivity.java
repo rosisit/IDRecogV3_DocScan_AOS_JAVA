@@ -422,15 +422,15 @@ public class DocumentCameraActivity extends Activity {
     }
 
     private void requestPermission(Activity activity) {
-        ArrayList<String> permissions = new ArrayList<>();
+        ArrayList<String> permissions = new ArrayList<String>();
         if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             permissions.add(Manifest.permission.CAMERA);
         }
 
-        if (ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE ) != PackageManager.PERMISSION_GRANTED) {
-            permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
-            permissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        }
+//        if (ContextCompat.checkSelfPermission(activity, Manifest.permission.READ_EXTERNAL_STORAGE ) != PackageManager.PERMISSION_GRANTED) {
+//            permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+//            permissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+//        }
 
         if (permissions.size() > 0) {
             String[] temp = new String[permissions.size()];
